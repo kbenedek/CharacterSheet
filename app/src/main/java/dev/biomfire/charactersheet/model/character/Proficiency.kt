@@ -21,5 +21,8 @@ class Proficiency(level: Int) {
         modifier = getProficiencyToLevel(currentLevel)
     }
 
+    fun isModifierValidForLevel(level: Int) : Boolean{
+        return modifier == getProficiencyToLevel(level)
+    }
     fun getModifier() = modifier
 }

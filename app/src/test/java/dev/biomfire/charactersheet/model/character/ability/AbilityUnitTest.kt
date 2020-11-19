@@ -7,25 +7,25 @@ class AbilityUnitTest {
 
     @Test
     fun modifier_isCorrect_1() {
-        val strength = Strength(1)
+        val strength = Ability("",1)
         Assert.assertEquals(-5, strength.getModifier())
     }
 
     @Test
     fun modifier_isCorrect_5() {
-        val strength = Strength(5)
+        val strength = Ability("",5)
         Assert.assertEquals(-3, strength.getModifier())
     }
 
     @Test
     fun modifier_isCorrect_22() {
-        val strength = Strength(18)
+        val strength = Ability("",18)
         Assert.assertEquals(4, strength.getModifier())
     }
 
     @Test
     fun modifier_isCorrect_30() {
-        val strength = Strength(30)
+        val strength = Ability("",30)
         Assert.assertEquals(10, strength.getModifier())
     }
 }

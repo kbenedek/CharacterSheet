@@ -1,6 +1,8 @@
 package dev.biomfire.charactersheet.model.character.ability
 
-abstract class Ability protected constructor(private var value: Int, private val name: String) {
+class Ability constructor(private val name: String, private var value: Int) {
+    constructor(ability: Ability) : this(ability.name, ability.value){}
+
 
     fun getRawValue(): Int = value
 
