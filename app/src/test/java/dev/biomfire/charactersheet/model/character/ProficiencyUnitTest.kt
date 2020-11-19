@@ -1,6 +1,5 @@
-package dev.biomfire.charactersheet.character
+package dev.biomfire.charactersheet.model.character
 
-import android.util.Log
 import org.junit.Test
 
 import org.junit.Assert.*

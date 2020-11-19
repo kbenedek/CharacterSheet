@@ -1,7 +1,7 @@
-package dev.biomfire.charactersheet.character.skill
+package dev.biomfire.charactersheet.model.character.skill
 
-import dev.biomfire.charactersheet.character.ability.Ability
-import dev.biomfire.charactersheet.character.Proficiency
+import dev.biomfire.charactersheet.model.character.ability.Ability
+import dev.biomfire.charactersheet.model.character.Proficiency
 
 abstract class Skill(private val proficiencyModifier: Proficiency, private val isProficient: Boolean) {
     abstract val ability: Ability

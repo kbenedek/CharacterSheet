@@ -1,7 +1,7 @@
-package dev.biomfire.charactersheet.character
+package dev.biomfire.charactersheet.model.character
 
-import dev.biomfire.charactersheet.character.ability.Ability
-import dev.biomfire.charactersheet.character.ability.Strength
+import dev.biomfire.charactersheet.model.character.ability.Ability
+import dev.biomfire.charactersheet.model.character.ability.Strength
 
 class Character(level: Int){
     val abilities = listOf<Ability>(Strength(1))

@@ -1,3 +1,3 @@
-package dev.biomfire.charactersheet.character.ability
+package dev.biomfire.charactersheet.model.character.ability
 
 class Intelligence(value : Int) :Ability(value, "Intelligence"){}

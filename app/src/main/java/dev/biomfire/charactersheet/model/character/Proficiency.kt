@@ -1,4 +1,4 @@
-package dev.biomfire.charactersheet.character
+package dev.biomfire.charactersheet.model.character
 
 class Proficiency(level: Int) {
     private var modifier: Int
