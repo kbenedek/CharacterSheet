@@ -2,6 +2,7 @@ package dev.biomfire.charactersheet.model.character
 
 import dev.biomfire.charactersheet.model.character.ability.Ability
 import dev.biomfire.charactersheet.model.character.skill.Skill
+import java.util.logging.Logger
 
 class Character private constructor(
     val abilities: HashMap<String, Ability>,
@@ -10,7 +11,7 @@ class Character private constructor(
     val level: Int
 ) {
     data class Builder(
-        var abilities: HashMap<String, Ability> = HashMap(),
+    var abilities: HashMap<String, Ability> = HashMap(),
         var skills: HashMap<String, Skill> = HashMap(),
         var proficiency: Proficiency? = null,
         var level: Int = 1
@@ -18,7 +19,6 @@ class Character private constructor(
         fun abilities(abilities: HashMap<String, Ability>) = apply { this.abilities = abilities }
         fun level(level: Int) = apply { this.level = level }
         fun skills(skills: HashMap<String, Skill>) = apply { this.skills = skills }
-        fun proficiency(proficiency: Proficiency) = apply { this.proficiency = proficiency }
         fun build(): Character {
             val finalLevel = level
             val finalProficiency = Proficiency(level)
@@ -26,6 +26,7 @@ class Character private constructor(
             for ((key, ability) in this.abilities) {
                 finalAbilities.put(key, Ability(ability))
             }
+
             val finalSkills = HashMap<String, Skill>()
             for ((_, skill) in this.skills) {
                 val baseAbilityName = skill.ability.getName()
